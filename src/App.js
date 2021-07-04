@@ -12,11 +12,10 @@ function App() {
     };
     const [clockState, setClockState] = useState({
         date: addHours(new Date(), initialOffset),
-        location: "London/GMT",
+        location: "Europe/London",
         offset: initialOffset,
         secondsSinceStart: new Date().getSeconds()
     });
-
 
     useEffect(() => {
         //update clock on next second
@@ -54,7 +53,7 @@ function App() {
             <div className="container">
                 <ClockFace clockState={clockState}/>
                 <div className={"subContainer"}><ClockTime date={clockState.date} location={clockState.location}/>
-                    <SelectTime setTimezone={setTimezone}/></div>
+                    <SelectTime setTimezone={setTimezone} location={clockState.location}/></div>
             </div>
         </>
     );

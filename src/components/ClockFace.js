@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import ClockHand from "./ClockHand";
 
 const ClockFace = props => {
-
     const rotationCount = {
         //number of times each hand has gone round the clock since start
         hours: Math.floor(props.clockState.secondsSinceStart / 60 / 60 / 24 / 2),

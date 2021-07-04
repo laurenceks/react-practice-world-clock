@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const TimeOption = props => {
     return (
-        <option value={props.value}>{props.label}</option>
+        <option selected={`${props.location === props.label ? "selected" : ""}`} value={props.value}>{props.label}</option>
     );
 };
 
